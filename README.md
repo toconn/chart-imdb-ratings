@@ -10,7 +10,7 @@ Example (Game of Thrones):
 
 Returns:
 
-![Game of Thrones Episode Ratings Chart](Game of Thrones - Ratings.png)
+![Game of Thrones Episode Ratings Chart](game_of_thrones_ratings.png)
 
 
 # Run
