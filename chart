@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+
+. venv start
+
+src/__main__.py $@
