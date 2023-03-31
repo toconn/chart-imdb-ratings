@@ -2,22 +2,33 @@
 
 Chart a TV show's episodes by IMDB rating.
 
-Downloads the episodes and their ratings from IMDB.
+Downloads the episodes and their ratings from IMDB and then creates an chart image for those ratings.
+The image is saved as a PNG file.
 
-Example (Game of Thrones):
+I wrote this over a couple of evenings. It comes as is and without warranty!
+
+
+Example - Chart Game of Thrones Episodes:
 
 	./chart tt0944947
 
-Returns:
+Creates:
 
 ![Game of Thrones Episode Ratings Chart](game_of_thrones_ratings.png)
+
+
+# Resources Used To Create This
+
+[Python SpeedSheet](https://speedsheet.io/s/python)  
+[Pillow SpeedSheet (Python Image Library)](https://speedsheet.io/s/pillow)  
+[Beautiful Soup Sheet](https://speedsheet.io/s/beautiful_soup) 
 
 
 # Run
 
 	./chart imdb_show_code
 
-Example (game of thrones)
+Example (game of thrones):
 
 	./chart tt0944947
 
