@@ -21,7 +21,7 @@ Creates:
 
 [Python SpeedSheet](https://speedsheet.io/s/python)  
 [Pillow SpeedSheet (Python Image Library)](https://speedsheet.io/s/pillow)  
-[Beautiful Soup Sheet](https://speedsheet.io/s/beautiful_soup) 
+[Beautiful Soup SpeedSheet](https://speedsheet.io/s/beautiful_soup) 
 
 
 # Run
