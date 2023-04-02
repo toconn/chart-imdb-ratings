@@ -16,63 +16,63 @@ NEWLINE = '\n'
 
 # Special Colors ───────────────────── #
 
-DEFAULT_COLOR = '\x1B[0m'
-DEFAULT_BACKGROUND = '\x1B[49m'
-RESET_COLOR = '\x1B[0m'
+DEFAULT_COLOR = '\033[0m'
+DEFAULT_BACKGROUND = '\033[49m'
+RESET_COLOR = '\033[0m'
 RESET = RESET_COLOR
 
 # Foreground ───────────────────────── #
 
-BLACK = '\x1B[30m'
-DARK_GRAY = '\x1B[90m'
-LIGHT_GRAY = '\x1B[37m'
-WHITE = '\x1B[97m'
-BLUE = '\x1B[34m'
-CYAN = '\x1B[36m'
-GREEN = '\x1B[32m'
-PURPLE = '\x1B[35m'
-MAGENTA = '\x1B[35m'
-RED = '\x1B[31m'
-YELLOW = '\x1B[33m'
-LIGHT_BLUE = '\x1B[94m'
-LIGHT_CYAN = '\x1B[96m'
-LIGHT_GREEN = '\x1B[92m'
-LIGHT_PURPLE = '\x1B[95m'
-LIGHT_MAGENTA = '\x1B[95m'
-LIGHT_RED = '\x1B[91m'
-LIGHT_YELLOW = '\x1B[93m'
+BLACK = '\033[30m'
+DARK_GRAY = '\033[90m'
+LIGHT_GRAY = '\033[37m'
+WHITE = '\033[97m'
+BLUE = '\033[34m'
+CYAN = '\033[36m'
+GREEN = '\033[32m'
+PURPLE = '\033[35m'
+MAGENTA = '\033[35m'
+RED = '\033[31m'
+YELLOW = '\033[33m'
+LIGHT_BLUE = '\033[94m'
+LIGHT_CYAN = '\033[96m'
+LIGHT_GREEN = '\033[92m'
+LIGHT_PURPLE = '\033[95m'
+LIGHT_MAGENTA = '\033[95m'
+LIGHT_RED = '\033[91m'
+LIGHT_YELLOW = '\033[93m'
 
 # Background ───────────────────────── #
 
-ON_BLACK = '\x1B[40m'
-ON_DARK_GRAY = '\x1B[100m'
-ON_LIGHT_GRAY = '\x1B[47m'
-ON_WHITE = '\x1B[107m'
-ON_BLUE = '\x1B[44m'
-ON_CYAN = '\x1B[46m'
-ON_GREEN = '\x1B[42m'
-ON_PURPLE = '\x1B[45m'
-ON_MAGENTA = '\x1B[45m'
-ON_RED = '\x1B[41m'
-ON_YELLOW = '\x1B[43m'
-ON_LIGHT_BLUE = '\x1B[104m'
-ON_LIGHT_CYAN = '\x1B[106m'
-ON_LIGHT_GREEN = '\x1B[102m'
-ON_LIGHT_YELLOW = '\x1B[103m'
-ON_LIGHT_PURPLE = '\x1B[105m'
-ON_LIGHT_MAGENTA = '\x1B[105m'
-ON_LIGHT_RED = '\x1B[101m'
-ON_LIGHT_YELLOW = '\x1B[103m'
+ON_BLACK = '\033[40m'
+ON_DARK_GRAY = '\033[100m'
+ON_LIGHT_GRAY = '\033[47m'
+ON_WHITE = '\033[107m'
+ON_BLUE = '\033[44m'
+ON_CYAN = '\033[46m'
+ON_GREEN = '\033[42m'
+ON_PURPLE = '\033[45m'
+ON_MAGENTA = '\033[45m'
+ON_RED = '\033[41m'
+ON_YELLOW = '\033[43m'
+ON_LIGHT_BLUE = '\033[104m'
+ON_LIGHT_CYAN = '\033[106m'
+ON_LIGHT_GREEN = '\033[102m'
+ON_LIGHT_YELLOW = '\033[103m'
+ON_LIGHT_PURPLE = '\033[105m'
+ON_LIGHT_MAGENTA = '\033[105m'
+ON_LIGHT_RED = '\033[101m'
+ON_LIGHT_YELLOW = '\033[103m'
 
 # Styles ───────────────────────────── #
 
-BOLD = '\x1B[1m'
-BLINK = '\x1B[5m'
-DIMMED = '\x1B[2m'
-ITALIC = '\x1B[3m'
-REVERSED = '\x1B[7m'
-STRIKETHROUGH = '\x1B[9m'
-UNDERLINE = '\x1B[4m'
+BOLD = '\033[1m'
+BLINK = '\033[5m'
+DIMMED = '\033[2m'
+ITALIC = '\033[3m'
+REVERSED = '\033[7m'
+STRIKETHROUGH = '\033[9m'
+UNDERLINE = '\033[4m'
 
 # User Defined ─────────────────────── #
 
@@ -136,6 +136,19 @@ class First:
     def not_first(self):
 
         return not self.is_first()
+
+
+class PrintOnLine:
+    ''' Prints text on the same line.
+        New text is added to the existing text.
+    '''
+
+    def __init__(self):
+        self.text = ''
+
+    def print(self, text):
+        self.text += text
+        print(self.text, end = '\r')
 
 
 def either(value_1, value_2):

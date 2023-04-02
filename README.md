@@ -1,4 +1,4 @@
-# chart-imdb
+# chart-imdb-ratings
 
 Charts a TV show's episodes by IMDB rating.
 
@@ -25,18 +25,18 @@ Creates:
 
 # Python References
 
-[Python SpeedSheet](https://speedsheet.io/s/python)  
-[Pillow SpeedSheet (Python Image Library)](https://speedsheet.io/s/pillow)  
-[Beautiful Soup SpeedSheet](https://speedsheet.io/s/beautiful_soup) 
+[SpeedSheet - Python](https://speedsheet.io/s/python)  
+[SpeedSheet - Pillow (Python Image Library)](https://speedsheet.io/s/pillow)  
+[SpeedSheet - Beautiful Soup](https://speedsheet.io/s/beautiful_soup)
 
 
 # Run
 
-	./chart imdb_show_code
+	chart imdb_show_code
 
 Example (game of thrones):
 
-	./chart tt0944947
+	chart tt0944947
 
 
 # Install - Windows
@@ -68,3 +68,8 @@ Start the environment:
 Install the libraries:
 
 	pip install -r requirements.txt
+
+
+# Inspiration
+
+The inspiration for this app came from [this reddit post](https://www.reddit.com/r/coolguides/comments/11en5ja/the_decline_of_the_simpsons/) where someone charted the decline of the simpsons in a colorful chart.

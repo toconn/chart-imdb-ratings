@@ -2,16 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 from colorama import Fore
 from shared import is_windows
+from shared import PrintOnLine
 
-
-class PrintOnLine:
-
-    def __init__(self):
-        self.text = ''
-
-    def print(self, text):
-        self.text += text
-        print(self.text, end = '\r')
 
 def retrieve_imdb_info(show):
 
@@ -22,10 +14,7 @@ def retrieve_imdb_info(show):
     show.seasons = seasons
 
     line = PrintOnLine()
-    if is_windows():
-        line.print(f"{name} : {seasons} Seasons: ")
-    else:
-        line.print(f"{Fore.GREEN}{name}{Fore.RESET} : {Fore.YELLOW}{seasons} Seasons{Fore.RESET} : ")
+    line.print(f"{Fore.LIGHTGREEN_EX}{name}{Fore.RESET} : {Fore.LIGHTYELLOW_EX}{seasons} Seasons{Fore.RESET} : ")
 
     for season in range(1, show.seasons + 1):
         line.print(".")

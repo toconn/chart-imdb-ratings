@@ -5,11 +5,12 @@ from data import Show
 from shared import *
 from imdb import retrieve_imdb_info
 from chart import create_chart
+from colorama import init, Fore, Style
 
 
-HELP = f'''Usage: {LIGHT_YELLOW}main {VAR}movie_code{RESET_COLOR}
+HELP = f'''Usage: {Fore.LIGHTYELLOW_EX}main {Fore.LIGHTMAGENTA_EX}movie_code{Fore.RESET}
 
-       {VAR}movie_code{RESET_COLOR}  The IMBD code for the movie (eg tt0944947).
+  {Fore.LIGHTMAGENTA_EX}movie_code{Fore.RESET}  The IMBD code for the movie (eg tt0944947).
 '''
 
 
@@ -53,11 +54,12 @@ def main(show):
 
 if __name__ == "__main__":
 
-    nl()
+	init()
+	nl()
 
-    if no_arguments():
-        show_help()
-        exit()
+	if no_arguments():
+		show_help()
+		exit()
 
-    main(get_settings())
+	main(get_settings())
 
