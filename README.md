@@ -10,6 +10,12 @@ I wrote this over a couple of evenings. It comes as is and without warranty!
 
 Example - Chart Game of Thrones Episodes:
 
+Windows:
+
+	chart tt0944947
+
+Mac / Linux:
+
 	./chart tt0944947
 
 Creates:
@@ -17,7 +23,7 @@ Creates:
 ![Game of Thrones Episode Ratings Chart](game_of_thrones_ratings.png)
 
 
-# Python References:
+# Python References
 
 [Python SpeedSheet](https://speedsheet.io/s/python)  
 [Pillow SpeedSheet (Python Image Library)](https://speedsheet.io/s/pillow)  

@@ -1,9 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 from colorama import Fore
+from shared import is_windows
 
 
-class Printer:
+class PrintOnLine:
 
     def __init__(self):
         self.text = ''
@@ -20,16 +21,19 @@ def retrieve_imdb_info(show):
     show.name = name
     show.seasons = seasons
 
-    printer = Printer()
-    printer.print(f"{Fore.GREEN}{name}{Fore.RESET} : {Fore.YELLOW}{seasons} Seasons{Fore.RESET} : ")
+    line = PrintOnLine()
+    if is_windows():
+        line.print(f"{name} : {seasons} Seasons: ")
+    else:
+        line.print(f"{Fore.GREEN}{name}{Fore.RESET} : {Fore.YELLOW}{seasons} Seasons{Fore.RESET} : ")
 
     for season in range(1, show.seasons + 1):
-        printer.print(".")
+        line.print(".")
         ratings = _retrieve_episode_ratings(_get_season_url(show.code, season))
         if len(ratings) > 0:
             show.ratings.append(ratings)
 
-    printer.print(" ✓")
+    line.print(" Done")
     print("\n")
 
 def _extract_name(soup):

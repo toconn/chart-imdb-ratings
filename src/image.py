@@ -6,8 +6,7 @@ from PIL.ImageFont import truetype
 from data import Point, Size
 from shared import is_mac
 
-FONT_NAME = 'Calibri' if is_mac else 'C:/Windows/Fonts/calibri.ttf'
-
+FONT_NAME = 'Calibri' if is_mac() else 'C:/Windows/Fonts/calibri.ttf'
 FONT = truetype(FONT_NAME, 16)
 
 BLACK = (0, 0, 0)
