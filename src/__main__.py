@@ -46,7 +46,7 @@ def get_settings():
 def main(show):
 	retrieve_imdb_info(show)
 	# show_show_ratings(show)
-	show_show_summary(show)
+	# show_show_summary(show)
 	chart = create_chart(show)
 	chart.save(show.name + " - Ratings.png")
 

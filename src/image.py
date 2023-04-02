@@ -4,9 +4,11 @@ from PIL.ImageDraw import Draw
 from PIL.ImageFont import truetype
 
 from data import Point, Size
+from shared import is_mac
 
+FONT_NAME = 'Calibri' if is_mac else 'C:/Windows/Fonts/calibri.ttf'
 
-FONT = truetype('Calibri', 16)
+FONT = truetype(FONT_NAME, 16)
 
 BLACK = (0, 0, 0)
 DARK_GREEN = (37, 120, 67)

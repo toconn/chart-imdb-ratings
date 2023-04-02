@@ -3,6 +3,7 @@
 from os.path import exists
 from sys import argv
 import traceback
+from platform import system
 
 COLUMN_1_WIDTH = 30
 COLUMN_SEPARATOR = ': '
@@ -18,6 +19,7 @@ NEWLINE = '\n'
 DEFAULT_COLOR = '\x1B[0m'
 DEFAULT_BACKGROUND = '\x1B[49m'
 RESET_COLOR = '\x1B[0m'
+RESET = RESET_COLOR
 
 # Foreground ───────────────────────── #
 
@@ -164,6 +166,14 @@ def is_comment(value):
 
 def is_empty(value):
     return not value
+
+
+def is_mac():
+    return system() == 'Darwin'
+
+
+def is_windows():
+    return system() == 'Windows'
 
 
 def not_blank(value):

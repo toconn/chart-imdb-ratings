@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from time import sleep
+from colorama import Fore
 
 
 class Printer:
@@ -14,14 +14,14 @@ class Printer:
 
 def retrieve_imdb_info(show):
 
-    printer = Printer()
-    printer.print(".")
+    print(".", end = '\r')
 
     name, seasons = _retrieve_show_name_seasons(_get_seasons_url(show.code))
     show.name = name
     show.seasons = seasons
 
-    printer.print(f" {show.seasons} ")
+    printer = Printer()
+    printer.print(f"{Fore.GREEN}{name}{Fore.RESET} : {Fore.YELLOW}{seasons} Seasons{Fore.RESET} : ")
 
     for season in range(1, show.seasons + 1):
         printer.print(".")
@@ -29,6 +29,7 @@ def retrieve_imdb_info(show):
         if len(ratings) > 0:
             show.ratings.append(ratings)
 
+    printer.print(" ✓")
     print("\n")
 
 def _extract_name(soup):

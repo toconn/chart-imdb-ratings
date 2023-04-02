@@ -1,0 +1,1 @@
+@venv\Scripts\python src/__main__.py %*
